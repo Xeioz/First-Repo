@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darren Paul T. — Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</head>
+<body>
+
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <a href="#home" class="logo-text">dp.</a>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home"    class="nav-link" data-section="home">Home</a>
+      <a href="#about"   class="nav-link" data-section="about">About</a>
+      <a href="#work"    class="nav-link" data-section="work">Projects</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-socials">
+        <a href="https://discord.gg/wx9vjJkR" title="Discord" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.445.864-.608 1.25a18.27 18.27 0 0 0-5.487 0c-.163-.386-.397-.875-.609-1.25a.077.077 0 0 0-.079-.037 19.736 19.736 0 0 0-4.884 1.515.070.070 0 0 0-.033.031C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.042-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.194.372-.293a.075.075 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.075.075 0 0 1 .079.009c.12.099.246.199.372.293a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.076.076 0 0 0-.041.107c.352.699.763 1.364 1.225 1.994a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-4.718-.838-8.812-3.549-12.454a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-.912-2.157-2.037 0-1.125.969-2.037 2.157-2.037 1.188 0 2.157.912 2.157 2.037 0 1.125-.969 2.037-2.157 2.037zm7.975 0c-1.183 0-2.157-.912-2.157-2.037 0-1.125.969-2.037 2.157-2.037 1.188 0 2.157.912 2.157 2.037 0 1.125-.969 2.037-2.157 2.037z"/></svg>
+        </a>
+        <a href="https://github.com/Xeioz" title="GitHub" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/suuuppperrduuppercutee" title="Facebook" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+      <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="greeting">Hello, I'm Darren Paul T.</p>
+      <h1 class="hero-title">Web<br><em>Developer</em></h1>
+      <p class="location">📍 Based in the Philippines</p>
+      <div class="hero-actions">
+        <a href="resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+        <a href="#work" class="outline-btn">View Projects</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-card-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="code-filename">portfolio.js</span>
+        </div>
+        <pre class="code-block"><code><span class="kw">const</span> <span class="var">developer</span> = {
+  <span class="prop">name</span>:     <span class="str">"Darren Paul T."</span>,
+  <span class="prop">role</span>:     <span class="str">"Web Developer"</span>,
+  <span class="prop">location</span>: <span class="str">"Philippines 🇵🇭"</span>,
+  <span class="prop">skills</span>: [
+    <span class="str">"HTML"</span>, <span class="str">"CSS"</span>,
+    <span class="str">"JavaScript"</span>, <span class="str">"PHP"</span>
+  ],
+  <span class="prop">available</span>: <span class="bool">true</span>
+};
+
+<span class="fn">console</span>.<span class="fn">log</span>(
+  <span class="str">"Open to opportunities!"</span>
+);</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2 class="section-title">about.</h2>
+    <div class="about-content">
+      <div class="about-left">
+        <p class="about-tagline">I build clean, responsive web experiences with a focus on usability.</p>
+        <p class="about-text">
+          I'm a web developer based in Antipolo City, Rizal, passionate about creating functional and visually appealing digital experiences. I enjoy turning ideas into real, working products — from structuring clean HTML layouts to writing logic-driven JavaScript and backend PHP.
+        </p>
+        <p class="about-text">
+          Currently studying and sharpening my skills in full-stack development, I'm always looking for opportunities to grow, collaborate, and build things that matter.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2019 – 2022</div>
+            <div class="timeline-description">Discovered web development in Senior High School. Built my first HTML pages and fell in love with making things in the browser.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2022 – 2024</div>
+            <div class="timeline-description">Enrolled in a BS IT program. Deepened skills in JavaScript, PHP, and MySQL through academic projects and personal builds.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2024 – Present</div>
+            <div class="timeline-description">Building a portfolio of real projects, exploring React, and actively seeking internship or junior developer opportunities.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <h3 class="stack-title">Tech Stack</h3>
+        <div class="stack-groups">
+          <div class="stack-group">
+            <span class="stack-label">Languages</span>
+            <div class="stack-badges">
+              <span class="badge">HTML5</span>
+              <span class="badge">CSS3</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">PHP</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Database & Backend</span>
+            <div class="stack-badges">
+              <span class="badge">MySQL</span>
+              <span class="badge">Node.js</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Tools & Workflow</span>
+            <div class="stack-badges">
+              <span class="badge">Git</span>
+              <span class="badge">GitHub</span>
+              <span class="badge">VS Code</span>
+              <span class="badge">Figma</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <span class="stack-label">Currently Learning</span>
+            <div class="stack-badges">
+              <span class="badge badge-learning">React</span>
+              <span class="badge badge-learning">Laravel</span>
+              <span class="badge badge-learning">Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="work" id="work">
+    <h2 class="section-title">projects.</h2>
+    <p class="work-intro">A collection of things I've built — from school projects to personal experiments. Click any card to learn more, or visit my <a href="https://github.com/Xeioz" target="_blank" rel="noopener noreferrer">GitHub profile</a>.</p>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="React">React</button>
+      <button class="filter-btn" data-filter="TypeScript">TypeScript</button>
+      <button class="filter-btn" data-filter="School Work">School Work</button>
+      <button class="filter-btn" data-filter="Prototype">Prototype</button>
+    </div>
+
+    <div class="work-grid" id="workGrid"></div>
+    <p class="no-projects" id="noProjects" style="display:none;">No projects found for this filter.</p>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-image-wrap">
+        <div class="modal-img-placeholder" id="modalImgPlaceholder"></div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tags" id="modalTags"></div>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-links" id="modalLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="section-title">contact.</h2>
+    <div class="contact-content">
+
+      <div class="contact-info-col">
+        <p class="contact-intro">Whether you have a project in mind, an internship opportunity, or just want to say hi — my inbox is open.</p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Email</span>
+              <a href="mailto:darrenpaultamayo@gmail.com" class="contact-value">darrenpaultamayo@gmail.com</a>
+            </div>
+            <button class="copy-btn" data-copy="darrenpaultamayo@gmail.com" title="Copy email" aria-label="Copy email">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.93 5.93l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Phone</span>
+              <a href="tel:+639661140050" class="contact-value">+63 966 114 005</a>
+            </div>
+            <button class="copy-btn" data-copy="+639661140050" title="Copy phone" aria-label="Copy phone">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Cupang, Antipolo City, Rizal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="https://github.com/Xeioz" class="contact-social-link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://discord.gg/wx9vjJkR" class="contact-social-link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.445.864-.608 1.25a18.27 18.27 0 0 0-5.487 0c-.163-.386-.397-.875-.609-1.25a.077.077 0 0 0-.079-.037 19.736 19.736 0 0 0-4.884 1.515.070.070 0 0 0-.033.031C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.042-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.194.372-.293a.075.075 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.075.075 0 0 1 .079.009c.12.099.246.199.372.293a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.076.076 0 0 0-.041.107c.352.699.763 1.364 1.225 1.994a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-4.718-.838-8.812-3.549-12.454a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-.912-2.157-2.037 0-1.125.969-2.037 2.157-2.037 1.188 0 2.157.912 2.157 2.037 0 1.125-.969 2.037-2.157 2.037zm7.975 0c-1.183 0-2.157-.912-2.157-2.037 0-1.125.969-2.037 2.157-2.037 1.188 0 2.157.912 2.157 2.037 0 1.125-.969 2.037-2.157 2.037z"/></svg>
+            Discord
+          </a>
+          <a href="https://www.facebook.com/suuuppperrduuppercutee" class="contact-social-link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-col">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" name="name" placeholder="Your name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="contactMsg">Message</label>
+            <textarea id="contactMsg" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="formSubmit">
+            <span class="submit-text">Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p class="form-note">Replace <code>YOUR_FORM_ID</code> with your <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a> form ID to activate.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="copy-toast" id="copyToast" aria-live="polite">Copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
